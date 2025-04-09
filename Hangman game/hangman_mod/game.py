@@ -61,12 +61,15 @@ class Game:
     
 
     def making_a_guess(self, guess):
+        
+        guess=guess.lower()
         if guess in self.chosen_word:
             for index, letter in enumerate(self.chosen_word):
                 if letter == guess:
                     self.blank_list[index] = guess  # Update the blank list with correct letters
         else:
             self.update_display += 1  # Increment when the guess is incorrect
+        return
 
     def play(self):
         print(self.game_graphics[self.update_display])

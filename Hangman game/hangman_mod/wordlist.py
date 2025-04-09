@@ -18,16 +18,16 @@ class WordList:
     ]
     
     word_categories = {
-    "movies": movies,
-    "fruits": fruits,
-    "countries": countries}
+    "1": movies,
+    "2": fruits,
+    "3": countries} # category list (key=index, value= themed word list)
 
 
     def get_word(self,category: str):
         category = category.lower()
         word_categories=self.word_categories
         if category in word_categories:
-            return random.choice(word_categories[category])
+            return random.choice(word_categories[category]).lower()
         else:
             raise ValueError(f"Invalid category: '{category}'. Choose from {list(word_categories.keys())}")
     
