@@ -2,11 +2,31 @@ import random
 
 class WordList:
 
-    _words=["rainbow","camel", "jazz", "grass", "follow","Hulk"]
+    movies = [
+    "Inception", "Titanic", "Gladiator", "Whiplash", "Interstellar",
+    "The Matrix", "Forrest Gump", "The Godfather", "Parasite", "Pulp Fiction"
+    ]
+    
+    fruits = [
+        "Apple", "Banana", "Cherry", "Date", "Elderberry",
+        "Fig", "Grape", "Mango", "Orange", "Pineapple"
+    ]
+    
+    countries = [
+        "India", "Brazil", "Canada", "France", "Germany",
+        "Japan", "Mexico", "Nigeria", "Spain", "Australia"
+    ]
+    
+    word_categories = {
+    "movies": movies,
+    "fruits": fruits,
+    "countries": countries}
 
-    def get_word(self):
-        if self._words:
-            return random.choice(self._words)
+
+    def get_word(self,category: str):
+        category = category.lower()
+        if category in word_categories:
+            return random.choice(word_categories[category])
         else:
-            raise ValueError("Word list is empty. Please add words first.")
+            raise ValueError(f"Invalid category: '{category}'. Choose from {list(word_categories.keys())}")
     
