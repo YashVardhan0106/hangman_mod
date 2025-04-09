@@ -13,8 +13,10 @@ def main():
     print("let's Begin!")
 
     words=WordList()
-    
-    game=Game(words.get_word())
+    theme=input(f"Select your theme: 1. Movies
+                                     2. Fruits
+                                     3. Countries")
+    game=Game(words.get_word(theme))
     game.play()
 
 if __name__=="__main__":
