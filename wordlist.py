@@ -25,6 +25,7 @@ class WordList:
 
     def get_word(self,category: str):
         category = category.lower()
+        word_categories=self.word_categories
         if category in word_categories:
             return random.choice(word_categories[category])
         else:
