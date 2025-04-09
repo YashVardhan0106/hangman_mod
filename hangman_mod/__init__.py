@@ -1,7 +1,7 @@
-# Package Declaration for hangman_modular
+# Package Declaration for hangman_mod
 
 # __init__.py
-# This file makes 'hangman_modular' a Python package.
+# This file makes 'hangman_mod' a Python package.
 
 
 # Import necessary modules from the package
