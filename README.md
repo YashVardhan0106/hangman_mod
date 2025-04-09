@@ -27,11 +27,12 @@ python -m hangman_mod.main
 ## Package Structure
 
 ```
-hangman_mod/
-├── __init__.py  # Package initializer
-├── user.py      # User management
-├── wordlist.py  # Word storage
-├── game.py      # Game logic
+hangman_game/
+|──hangman_mod/
+  ├── __init__.py  # Package initializer
+  ├── user.py      # User management
+  ├── wordlist.py  # Word storage
+  ├── game.py      # Game logic
 ├── main.py      # Entry point
 ```
 
